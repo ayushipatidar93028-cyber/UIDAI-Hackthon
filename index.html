@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aadhaar Enrolment Trends - UIDAI Hackathon 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="presentation-container">
+        
+        <!-- Navigation Controls -->
+        <div class="nav-controls">
+            <button id="prevBtn" class="nav-btn" onclick="prevSlide()">&#10094;</button>
+            <button id="nextBtn" class="nav-btn" onclick="nextSlide()">&#10095;</button>
+        </div>
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+
+        <!-- Slide 1: Title Page -->
+        <div class="slide active" id="slide-1">
+            <div class="content-center">
+                <h1 class="main-title">State-wise and Age-wise Analysis of Aadhaar Enrolment Trends in India</h1>
+                <h2 class="sub-title">UIDAI Data Hackathon 2026</h2>
+                
+                <div class="team-card glass-panel">
+                    <h3>Team Name: <span class="highlight-text">Data Wizards</span></h3>
+                    <ul class="team-list">
+                        <li><strong>Aayushi Patidar</strong> (Team Leader)</li>
+                        <li>Chanchal Patidar</li>
+                        <li>Kashwi Patidar</li>
+                        <li>Sakshi Patidar</li>
+                    </ul>
+                    <p class="college-name">College Name-Jawaharlal Institute of Technology Borawan.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 2: Introduction -->
+        <div class="slide" id="slide-2">
+            <div class="content-left">
+                <h2>Introduction</h2>
+                <div class="glass-panel text-content">
+                    <p><strong class="highlight-text">Aadhaar</strong> is India’s foundational digital identity system that allows citizens to access government and financial services efficiently.</p>
+                    <p>Analyzing Aadhaar enrolment data helps understand <span class="keyword">regional</span> and <span class="keyword">demographic adoption patterns</span>, which is essential for improving service delivery and inclusivity.</p>
+                </div>
+                <div class="glass-panel focus-box">
+                    <h3>Project Focus</h3>
+                    <p>This project analyzes Aadhaar enrolment trends across Indian states and age groups using publicly available UIDAI data.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Problem Statement -->
+        <div class="slide" id="slide-3">
+            <div class="content-left">
+                <h2>Problem Statement</h2>
+                <div class="glass-panel text-content">
+                    <p>The goal of this project is to analyze state-wise and age-wise Aadhaar enrolment patterns to:</p>
+                    <ul class="bullet-list">
+                        <li>Identify enrolment trends across India</li>
+                        <li>Detect disparities between states and age groups</li>
+                        <li>Understand growth behavior over the years</li>
+                    </ul>
+                </div>
+                <div class="glass-panel impact-box">
+                    <h3>Impact</h3>
+                    <p>Insights aim to help <span class="highlight-text">UIDAI</span> in <strong>data-driven planning</strong> and <strong>optimization</strong> of enrolment services.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Dataset Description -->
+        <div class="slide" id="slide-4">
+            <div class="content-left">
+                <h2>Dataset Description</h2>
+                <div class="glass-panel text-content">
+                    <ul class="data-list">
+                        <li><strong>Dataset Name:</strong> Aadhaar Enrolment Dataset</li>
+                        <li><strong>Source:</strong> UIDAI (event.data.gov.in)</li>
+                        <li><strong>Data Type:</strong> Aggregated public data</li>
+                        <li><strong>Time Period:</strong> [Insert your dataset year range]</li>
+                    </ul>
+                </div>
+                
+                <div class="glass-panel columns-box">
+                    <h3>Columns Used</h3>
+                    <div class="tags">
+                        <span class="tag">State</span>
+                        <span class="tag">Year</span>
+                        <span class="tag">Age Group</span>
+                        <span class="tag">Enrolment Count</span>
+                    </div>
+                </div>
+
+                <div class="fun-fact-bubble">
+                    💡 <strong>Fun Fact:</strong> Some small UTs like Lakshadweep achieved 100% Aadhaar coverage before 2018!
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 5: Methodology -->
+        <div class="slide" id="slide-5">
+            <div class="content-left">
+                <h2>Methodology</h2>
+                <div class="process-flow">
+                    <div class="step glass-panel">
+                        <span class="step-num">1</span>
+                        <p>Dataset cleaned (removed missing/inconsistent values).</p>
+                    </div>
+                    <div class="step glass-panel">
+                        <span class="step-num">2</span>
+                        <p>Column names standardized for uniform analysis.</p>
+                    </div>
+                    <div class="step glass-panel">
+                        <span class="step-num">3</span>
+                        <p>Data aggregated by state, age group, and year.</p>
+                    </div>
+                    <div class="step glass-panel">
+                        <span class="step-num">4</span>
+                        <p>Visualizations applied to identify trends.</p>
+                    </div>
+                </div>
+                <div class="glass-panel tools-box">
+                    <h3>Tools Used</h3>
+                    <p>Python, Pandas, Matplotlib, Seaborn</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 6: State-wise Analysis -->
+        <div class="slide" id="slide-6">
+            <div class="content-split">
+                <div class="text-side">
+                    <h2>State-wise Aadhaar Enrolment Analysis</h2>
+                    <div class="glass-panel insight-box">
+                        <h3>Insight</h3>
+                        <p>States with higher population and urbanization have significantly higher enrolments, showing better accessibility and awareness.</p>
+                    </div>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-placeholder">
+                        <img src="image/state_year_bar.png" alt="Top 10 States by Aadhaar Enrolment" class="chart-img">
+
+                        <small>Top 10 States by Aadhaar Enrolment</small>
+                        <small>You need to Zoom the image</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 7: Age-group Analysis -->
+        <div class="slide" id="slide-7">
+            <div class="content-split">
+                <div class="text-side">
+                    <h2>Age-group Distribution</h2>
+                    <div class="glass-panel insight-box">
+                        <h3>Insight</h3>
+                        <p>Adult age groups contribute the highest share, reflecting demand for identity documents related to employment, banking, and government services.</p>
+                    </div>
+                    <div class="fun-fact-bubble">
+                        💡 Children under 5 account for < 5% of enrolments.
+                    </div>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-placeholder">
+                        <img src="image/age_pie.png" alt="Age-wise Aadhaar Enrolment" class="chart-img">
+
+                        <small>Aadhaar Enrolment by Age Group</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 8: Year-wise Trend Analysis -->
+        <div class="slide" id="slide-8">
+            <div class="content-split">
+                <div class="text-side">
+                    <h2>Year-wise Trend Analysis</h2>
+                    <div class="glass-panel insight-box">
+                        <h3>Insight</h3>
+                        <p>Overall enrolment grew steadily, showing growing adoption and trust in Aadhaar as a primary identity system.</p>
+                    </div>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-placeholder">
+                        <p>📊 PASTE LINE CHART IMAGE HERE</p>
+                        <img src="image/year_bar.png" alt="Year-wise Aadhaar Enrolment" class="chart-img">
+
+                        <small>Year-wise Aadhaar Enrolment Trend</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 9: Advanced Analysis - Heatmap -->
+        <div class="slide" id="slide-9">
+            <div class="content-split">
+                <div class="text-side">
+                    <h2>State vs Year Heatmap</h2>
+                    <div class="glass-panel insight-box">
+                        <h3>Insight</h3>
+                        <p>Certain states show sharp enrolment increases during specific years due to focused drives or policy initiatives.</p>
+                    </div>
+                </div>
+                <div class="chart-side">
+                    <div class="chart-placeholder">
+                        <img src="image/state_bar.png" alt="State-wise Aadhaar Enrolment Over Years" class="chart-img">
+                        <small>State-wise enrolment trends over years</small> <small>You need to Zoom the image</small>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 10: Key Insights -->
+        <div class="slide" id="slide-10">
+            <div class="content-left">
+                <h2>Key Insights</h2>
+                <div class="insights-grid">
+                    <div class="glass-panel">
+                        <h3>Demographics</h3>
+                        <p>Aadhaar enrolment is highest in densely populated states. Adult age groups dominate enrolment numbers.</p>
+                    </div>
+                    <div class="glass-panel">
+                        <h3>Growth</h3>
+                        <p>Enrolment shows consistent growth over time with regional variations highlighting the need for targeted strategies.</p>
+                    </div>
+                </div>
+                <div class="glass-panel policy-box">
+                    <h3>Policy Implication</h3>
+                    <p>Focused campaigns in low-enrolment regions can increase coverage significantly.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 11: Recommendations -->
+        <div class="slide" id="slide-11">
+            <div class="content-left">
+                <h2>Recommendations for UIDAI</h2>
+                <div class="recommendations-list">
+                    <div class="rec-item glass-panel">
+                        <span class="icon"></span>
+                        <p>Increase enrolment centers in high-demand states.</p>
+                    </div>
+                    <div class="rec-item glass-panel">
+                        <span class="icon"></span>
+                        <p>Strengthen awareness programs in low-enrolment regions.</p>
+                    </div>
+                    <div class="rec-item glass-panel">
+                        <span class="icon"></span>
+                        <p>Replicate successful enrolment campaigns across states.</p>
+                    </div>
+                    <div class="rec-item glass-panel">
+                        <span class="icon"></span>
+                        <p>Design initiatives for underrepresented age groups.</p>
+                    </div>
+                     <div class="glass-panel future-work-box">
+                    <h3>Code or NoteBook Refrences</h3>
+                        <p>GitHub:- https://github.com/ayushipatidar93028-cyber/UIDAI-Hackthon</p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+
+        <!-- Slide 12: Conclusion -->
+        <div class="slide" id="slide-12">
+            <div class="content-left">
+                <h2>Conclusion & Future Work</h2>
+                <div class="glass-panel text-content">
+                    <p>This analysis provides valuable insights into Aadhaar enrolment patterns across states and age groups.</p>
+                <h3>Impact</h3>
+                    <ul class="bullet-list">
+                        <li>Improve enrolment planning</li>
+                        <li>Enhance accessibility</li>
+                        <li>Ensure inclusive identity coverage</li>
+                </div>
+        
+                <div class="glass-panel future-work-box">
+                    <h3>Limitations & Future Work</h3>
+                    <p><strong>Limitation:</strong> Data is aggregated; micro-level analysis not possible.</p>
+                    <p><strong>Future Work:</strong> Predictive modelling, gender-based enrolment analysis, targeted campaigns.</p>
+                </div>
+                <p class="college-name">~Thank you.</p>
+            </div>
+        </div>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
